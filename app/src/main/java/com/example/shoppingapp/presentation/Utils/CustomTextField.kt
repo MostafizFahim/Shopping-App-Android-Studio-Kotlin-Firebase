@@ -12,23 +12,24 @@ import androidx.compose.ui.text.input.VisualTransformation
 @Composable
 fun CustomTextField(
     value: String,
-    onValueChange:(String)->Unit,
-    label:String,
-    modifier: Modifier= Modifier,
-    singleLine: Boolean=true,
+    onValueChange: (String) -> Unit,
+    label: String,
+    modifier: Modifier = Modifier,
+    singleLine: Boolean = true,
     leadingIcon: ImageVector? = null,
     visualTransformation: VisualTransformation = VisualTransformation.None,
     keyboardOptions: KeyboardOptions = KeyboardOptions.Default
-){ OutlinedTextField(
-        value = value ,
+) {
+    OutlinedTextField(
+        value = value,
         onValueChange = onValueChange,
         label = { Text(text = label) },
         modifier = modifier,
         singleLine = singleLine,
         visualTransformation = visualTransformation,
         keyboardOptions = keyboardOptions,
-        leadingIcon= leadingIcon?.let {
-            {Icon(imageVector = it,contentDescription = null)}
+        leadingIcon = leadingIcon?.let {
+            { Icon(imageVector = it, contentDescription = null) }
         }
     )
 
