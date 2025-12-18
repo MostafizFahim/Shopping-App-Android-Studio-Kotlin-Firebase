@@ -14,7 +14,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.example.shoppingapp.presentation.LoginScreen
 import com.example.shoppingapp.presentation.SignUpScreen
 import com.example.shoppingapp.ui.theme.ShoppingAppTheme
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
